@@ -34,7 +34,7 @@ subnets = [ipaddress.ip_network(subnet, strict=False) for subnet in subnet_list]
 filtered_ip_list = [str(ip) for ip in ip_addresses if not any(ip in subnet for subnet in subnets)]
 
 # Write the filtered list to a new text file
-output_file = '/var/www/intranet/filtered_ip6.txt'
+output_file = '/var/www/intranet/dohfilter/main_v6.txt'
 with open(output_file, 'w') as file:
     for ip in filtered_ip_list:
         file.write(ip + '\n')
